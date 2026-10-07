@@ -55,7 +55,7 @@ def write_metric_batch(node: str, metrics: list[dict]) -> int:
     return len(points)
 
 
-def fetch_latest(service: str) -> dict[str, float]:
+def fetch_latest(service: str, window: str = "5m") -> dict[str, float]:
     """
     Return the most recent field values for a service.
     Used by the anomaly detector to build the current feature vector.
@@ -67,7 +67,7 @@ def fetch_latest(service: str) -> dict[str, float]:
 
     query = f"""
     from(bucket: "{INFLUX_BUCKET}")
-      |> range(start: -30s)
+      |> range(start: -{window})
       |> filter(fn: (r) => r["service"] == "{service}")
       |> filter(fn: (r) => {" or ".join([f'r["_field"] == "{f}"' for f in fields])})
       |> last()

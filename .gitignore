@@ -1,9 +1,63 @@
-phase1_ec2
-/system_architecture_diagram.jpg
-phase1_ec2/*
-/project_description.txt
+# Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
 
+# Environments
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
 
+# Executables & Local Binaries
+*.exe
+ngrok.exe
+cloudflared.exe
+
+# Environment variables & secrets
+.env
+*.env.local
+
+# Docker volume mounts & logs
+*.log
+grafana_data/
+influxdb_data/
+
+# Temporary / Scratch docs
+phase1_ec2/
+project_description.txt
+system_architecture_diagram.jpg
 
