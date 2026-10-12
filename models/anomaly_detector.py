@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 ANOMALY_THRESHOLD    = 0.85
 TRAINING_WINDOW      = "7d"
-SCORE_WINDOW         = "30d"   # wide window — always finds last available point
+SCORE_WINDOW         = "30d"   # Snapshot lookup window
 MIN_TRAINING_SAMPLES = 50
 
 FEATURES = [
