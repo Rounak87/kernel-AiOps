@@ -1,0 +1,15 @@
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112043] INFO: task multipathd:1294 blocked for more than 120 seconds.
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112081]       Not tainted 6.8.0-41-generic #41-Ubuntu
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112083] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112085] task:multipathd       state:D stack:0     pid:1294  ppid:1
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112088] Call Trace:
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112090]  <TASK>
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112092]  __schedule+0x3d0/0xd40
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112094]  schedule+0x5e/0xd0
+Oct 07 11:40:01 ip-172-31-14-88 kernel: [289341.112096]  futex_wait_queue+0x61/0xa0
+Oct 07 11:42:31 ip-172-31-14-88 kernel: [289481.340021] multipathd[1294]: futex wait blocked 943ms on path-selector lock
+Oct 07 11:42:31 ip-172-31-14-88 kernel: [289481.340044] multipathd[1294]: path group activation stall — lock contention on dm-0
+Oct 07 11:42:33 ip-172-31-14-88 kernel: [289483.002341] blk-throttle: multipathd: I/O throttled, queue depth exceeded on nvme0n1
+Oct 07 11:42:33 ip-172-31-14-88 kernel: [289483.002380] device-mapper: multipath: multipathd[1294]: all paths failed on map dm-0
+Oct 07 11:43:10 ip-172-31-14-88 kernel: [289520.991021] multipathd[1294]: path reinstatement delayed 37s — futex contention unresolved
+Oct 07 11:44:01 ip-172-31-14-88 systemd[1]: multipathd.service: Watchdog timeout (limit 1min 30s)!

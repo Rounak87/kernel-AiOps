@@ -53,6 +53,7 @@ cloudflared.exe
 
 # Docker volume mounts & logs
 *.log
+!agent/logs/*.log
 grafana_data/
 influxdb_data/
 

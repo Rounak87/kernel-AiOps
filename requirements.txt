@@ -9,3 +9,7 @@ statsmodels
 numpy
 pandas
 openai
+google-generativeai
+google-genai
+pyyaml
+python-dotenv

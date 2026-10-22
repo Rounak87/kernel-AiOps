@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 SIGNIFICANCE_THRESHOLD = 0.05
 DEFAULT_MAX_LAG        = 3
 MIN_SAMPLES_REQUIRED   = 30
-DEFAULT_WINDOW         = "7d"
+DEFAULT_WINDOW         = "30d"
 
 
 @dataclass

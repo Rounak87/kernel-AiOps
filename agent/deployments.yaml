@@ -1,0 +1,46 @@
+deployments:
+  multipathd:
+    - timestamp: "2026-10-07T08:12:44Z"
+      version: "2.4.14-1ubuntu0.2"
+      commit: "a3f7c2d"
+      author: "ops-automation"
+      summary: "Updated multipath.conf: added new NVMe path group with queue_mode=multi"
+      diff_stat: "multipath.conf +12 -3"
+
+    - timestamp: "2026-10-04T14:30:00Z"
+      version: "2.4.14-1ubuntu0.1"
+      commit: "b8e91fa"
+      author: "sre-team"
+      summary: "Bumped multipathd systemd unit: increased LimitNOFILE for high-connection workloads"
+      diff_stat: "multipathd.service +2 -1"
+
+  ml-engine:
+    - timestamp: "2026-10-07T09:45:00Z"
+      version: "v1.4.2"
+      commit: "f02da19"
+      author: "ml-platform-ci"
+      summary: "Increased inference worker threads from 4 to 16; added GPU batch queue"
+      diff_stat: "config.yaml +4 -1, worker.py +38 -12"
+
+    - timestamp: "2026-10-06T17:20:00Z"
+      version: "v1.4.1"
+      commit: "c7a3e55"
+      author: "ml-platform-ci"
+      summary: "Pinned numpy to 1.26.0; fixed memory leak in feature preprocessing pipeline"
+      diff_stat: "requirements.txt +1 -1, preprocess.py +5 -2"
+
+  jbd2/nvme0n1p1-:
+    - timestamp: "2026-10-01T00:00:00Z"
+      version: "kernel-6.8.0"
+      commit: "kernel-stable"
+      author: "system"
+      summary: "Kernel upgraded to 6.8.0-41-generic; no NVMe driver changes"
+      diff_stat: "N/A"
+
+  sshd:
+    - timestamp: "2026-10-05T11:00:00Z"
+      version: "openssh-9.3p1"
+      commit: "system-package"
+      author: "apt-unattended-upgrade"
+      summary: "Security patch: CVE-2024-6387 applied"
+      diff_stat: "N/A"

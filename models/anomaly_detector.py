@@ -23,8 +23,8 @@ from pipeline.db import fetch_history, fetch_latest
 log = logging.getLogger(__name__)
 
 ANOMALY_THRESHOLD    = 0.85
-TRAINING_WINDOW      = "7d"
-SCORE_WINDOW         = "30d"   # Snapshot lookup window
+TRAINING_WINDOW      = "30d"
+SCORE_WINDOW         = "30d"
 MIN_TRAINING_SAMPLES = 50
 
 FEATURES = [

@@ -1,0 +1,5 @@
+Oct 07 11:40:15 ip-172-31-14-88 kernel: [289355.441021] jbd2/nvme0n1p1-8: 512 slow commits, average delay 340ms
+Oct 07 11:41:02 ip-172-31-14-88 kernel: [289402.770012] EXT4-fs error (device nvme0n1p1): ext4_find_entry: 1455: inode #2: comm jbd2/nvme0n1p1-: reading directory lblock 0
+Oct 07 11:41:55 ip-172-31-14-88 kernel: [289455.129043] jbd2/nvme0n1p1-8: I/O error writing to journal: ret = -5
+Oct 07 11:42:33 ip-172-31-14-88 kernel: [289483.330021] blk-wbt: jbd2/nvme0n1p1: throttled for 200ms due to heavy queue depth on nvme0n1
+Oct 07 11:43:00 ip-172-31-14-88 kernel: [289500.003401] jbd2/nvme0n1p1-8: checkpoint stall 880ms — disk write queue backed up

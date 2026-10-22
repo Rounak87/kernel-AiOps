@@ -1,0 +1,6 @@
+Oct 07 11:39:45 ip-172-31-14-88 ml-engine[3812]: WARNING inference_worker-12: GIL contention detected — 16 threads competing, avg wait 112ms
+Oct 07 11:40:01 ip-172-31-14-88 ml-engine[3812]: ERROR  batch_processor: lock acquisition timeout after 500ms on feature_cache_lock
+Oct 07 11:40:11 ip-172-31-14-88 ml-engine[3812]: WARNING inference_worker-07: involuntary context switch storm — 298 switches in 1s interval
+Oct 07 11:41:30 ip-172-31-14-88 ml-engine[3812]: ERROR  data_pipeline: mmap read stall 640ms — major page fault burst (48 faults)
+Oct 07 11:42:10 ip-172-31-14-88 ml-engine[3812]: CRITICAL scheduler: run-queue depth 14 — CPU saturation imminent
+Oct 07 11:42:55 ip-172-31-14-88 ml-engine[3812]: ERROR  inference_worker-03: syscall latency 890ms on pread64 — disk I/O stall propagating from multipathd

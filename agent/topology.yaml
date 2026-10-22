@@ -1,0 +1,50 @@
+services:
+  multipathd:
+    upstream: []
+    downstream:
+      - jbd2/nvme0n1p1-
+      - kworker/u4:2
+    type: kernel-daemon
+    description: Device mapper multipath daemon, manages block device I/O paths
+
+  ml-engine:
+    upstream:
+      - sshd
+    downstream:
+      - multipathd
+    type: application
+    description: Python ML inference service, CPU and lock-intensive workload
+
+  jbd2/nvme0n1p1-:
+    upstream:
+      - multipathd
+    downstream: []
+    type: kernel-daemon
+    description: ext4 journaling daemon for NVMe block device
+
+  sshd:
+    upstream: []
+    downstream:
+      - ml-engine
+    type: system-service
+    description: OpenSSH server, handles all remote shell sessions
+
+  systemd-resolve:
+    upstream: []
+    downstream:
+      - sshd
+      - ml-engine
+    type: system-service
+    description: systemd-resolved DNS stub resolver
+
+  chronyd:
+    upstream: []
+    downstream: []
+    type: system-service
+    description: NTP time synchronization daemon, no I/O dependencies
+
+  amazon-ssm-agent:
+    upstream: []
+    downstream: []
+    type: system-service
+    description: AWS Systems Manager agent for remote instance management

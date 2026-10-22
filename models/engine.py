@@ -96,7 +96,7 @@ class MLAnalyticsEngine:
             status=status,
         )
 
-    def diagnose_all_active(self, window: str = "7d") -> list[IncidentDiagnosis]:
+    def diagnose_all_active(self, window: str = "30d") -> list[IncidentDiagnosis]:
         """
         Scans all active services, detects anomalies, and generates structured diagnoses.
         """
