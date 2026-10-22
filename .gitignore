@@ -44,6 +44,7 @@ desktop.ini
 
 # Executables & Local Binaries
 *.exe
+*.bat
 ngrok.exe
 cloudflared.exe
 

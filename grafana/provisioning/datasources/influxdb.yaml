@@ -1,0 +1,19 @@
+apiVersion: 1
+
+deleteDatasources:
+  - name: InfluxDB_Flux
+    orgId: 1
+
+datasources:
+  - name: InfluxDB_Flux
+    uid: InfluxDB_Flux
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    isDefault: true
+    jsonData:
+      version: Flux
+      organization: aiops
+      defaultBucket: kernel_metrics
+    secureJsonData:
+      token: aiops-token-2024
